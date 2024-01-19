@@ -1,0 +1,234 @@
+:root {
+    --primary: #f2951c;
+    --bg: #000000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "poppins", sans-serif;
+    background-color: var(--bg);
+    color: #000000ee;
+    justify-content: center;
+  }
+  
+  /* navbar */
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-style: italic;
+  }
+  .navbar .navbar-logo span {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a {
+    color: #000000;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .navbar .navbar-nav a:hover {
+    color: var(--primary);
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #000000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("img/webbanner.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    position: relative;
+    justify-content: center;
+  }
+  .hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    bottom: 0;
+    background-color: #000000;
+  }
+  .img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+  }
+
+  .hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+  }
+  .hero .content h1 {
+    font-size: 2rem;
+    color: #000000;
+    text-shadow: 1px 1px 3px rgba(16, 16, 16, 0.5);
+    line-height: 1.2;
+  }
+  
+  .hero .content h1 span {
+    color: var(--primary);
+  }
+  .hero .content p {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    line-height: 1.4;
+    font-weight: 80;
+    text-shadow: 1px 1px 3px rgba(23, 23, 22, 0.689);
+    mix-blend-mode: difference;
+  }
+  .hero .content .cta {
+    margin-top: 2.5rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: #000000;
+    background-color: var(--primary);
+  }
+  
+  /* About Section */
+  
+  
+  /* About Row */
+  
+  .about .row{
+    display: flex;
+  }
+  
+  .about .row .about-img{
+    flex: 1 1 5rem;
+  }
+  
+  .about .row .about-img img {
+    width: 100%;
+  }
+  
+  .about .row .content{
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+  }
+  
+  .about .row .content h3{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  
+  }
+  
+  .about .row .content p{
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.6;
+  }
+  
+  /* menu section */
+
+  /* Media Queries */
+  
+  /* Queries Laptop */
+  @media(max-width: 1024px) {
+    html {
+      font-size: 75%;
+    }
+  }
+  
+  /* Queries Tablet */
+  @media (max-width: 768px) {
+    html {
+      font-size: 62.5%;
+    }
+  
+  /* Navbar */
+    .navbar .navbar-nav {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: #fff;
+      height: 100vh;
+      width: 30rem;
+      transition: 0.3s;
+    }
+  
+    .navbar .navbar-nav.active {
+      right: 0;
+    }
+    .navbar .navbar-nav a {
+      color: var(--bg);
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+    }
+    .navbar .navbar-nav a::after {
+      transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover:after {
+      transform: scaleX(0.2);
+    }
+    .about .row{
+      flex-wrap: wrap;
+    }
+    .about .row .about-img img{
+      height: 24rem;
+      object-fit: cover;
+      object-position: center;
+    }
+    .about .row .content{
+      padding: 0;
+  
+    }
+    .about .row .content h3{
+      margin-top: 1rem;
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* QUeries Mobile */
+  @media (max-width: 720px) {
+    html {
+      font-size: 55%;
+    }
+  }
+
+  .navbar{
+    background-color: #000000;
+  }
+
+ .col-4 .display-6 span{
+  font-size: 2.1rem;
+  color: #000000;
+ }
+
+  .logout{
+    position : right;
+  }
