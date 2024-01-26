@@ -1,2 +1,2 @@
 # storephone
-my first project
+Give me advice if you want.Thank you.
